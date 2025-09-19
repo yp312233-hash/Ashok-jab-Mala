@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>राधे राधे</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0d1a26; /* गहरा नीला बैकग्राउंड */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: #ecf0f1; /* हल्का सफ़ेद रंग */
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .counter-container {
+            text-align: center;
+            background-color: #1a2c3d; /* गहरा नीला कंटेनर */
+            padding: 50px 70px;
+            border-radius: 25px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid #2e445b;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #f39c12; /* सुनहरा रंग */
+            margin-bottom: 20px;
+        }
+
+        #count-display {
+            font-size: 10rem;
+            font-weight: bold;
+            color: #3498db; /* नीला रंग */
+            margin-bottom: 20px;
+        }
+
+        #jap-button {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-color: #2ecc71; /* हरा बटन */
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease-in-out;
+            touch-action: manipulation;
+        }
+
+        #jap-button:hover {
+            background-color: #27ae60;
+            transform: scale(1.05);
+        }
+
+        #jap-button:active {
+            transform: scale(0.95);
+        }
+
+        #reset-button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #e74c3c; /* लाल रीसेट बटन */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s;
+        }
+
+        #reset-button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="counter-container">
+        <h1>राधे राधे</h1>
+        <div id="count-display">0</div>
+        <button id="jap-button">जाप करें</button>
+        <br>
+        <button id="reset-button">रीसेट करें</button>
+    </div>
+
+    <script>
+        const japButton = document.getElementById('jap-button');
+        const resetButton = document.getElementById('reset-button');
+        const countDisplay = document.getElementById('count-display');
+        let count = 0;
+
+        japButton.addEventListener('click', () => {
+            count++;
+            countDisplay.textContent = count;
+        });
+
+        resetButton.addEventListener('click', () => {
+            count = 0;
+            countDisplay.textContent = count;
+        });
+    </script>
+
+</body>
+</html>
+
+
